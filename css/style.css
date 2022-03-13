@@ -132,6 +132,7 @@
   width: 132px;
   height: 54px;
   background-image: url("../assets/svg/timer-decor.svg");
+  background-repeat: no-repeat;
 }
 
 .timer__unit-descr::before {
@@ -238,6 +239,7 @@
   width: 43px;
   height: 43px;
   border-radius: 50%;
+  padding: 0;
   background-color: #DF2224;
   background-image: url('../assets/svg/arrow-right.svg');
   background-repeat: no-repeat;
@@ -245,3 +247,126 @@
   border: none;
   cursor: pointer;
 }
+
+
+@media (max-width: 1400px) {
+  .container::before {
+    width: 478px;
+    height: 394px;
+    top: -198px;
+    left: -251px;
+    transform: rotate(-24deg);
+  }
+  
+  .container::after {
+    top: -500px;
+    right: -515px;
+    transform: rotate(-86.33deg);
+  }
+}
+
+@media (max-width: 1200px) {
+  .title {
+    font-size: 64px;
+  }
+}
+
+@media (max-width: 992px) {
+  .title {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding-bottom: 168px;
+  }
+
+  .header {
+    padding-top: 100px;
+    margin-bottom: 166px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    margin-bottom: 40px;
+    width: 286px;
+  }
+
+  .timer {
+    width: 358px;
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+  
+  .timer__unit-value {
+    margin-bottom: 6px;
+  }
+  
+  .timer__unit-descr {
+    width: 64px;
+    height: 40px;
+    background-image: url("../assets/svg/timer-decor_tablet.svg");
+  }
+  
+  .timer__unit-descr::before {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  
+  .timer__unit--days .timer__unit-descr::before {
+    content: "DD";
+  }
+  .timer__unit--hours .timer__unit-descr::before {
+    content: "HH";
+  }
+  .timer__unit--minutes .timer__unit-descr::before {
+    content: "MM";
+  }
+  .timer__unit--seconds .timer__unit-descr::before {
+    content: "SS";
+  }
+
+  .event__text {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 15px;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+    padding: 0;
+  }
+
+  .form {
+    width: 360px;
+  }
+  
+  .form__input {
+    font-size: 14px;
+    height: 41px;
+    padding: 10px 57px 10px 20px;
+  }
+  
+  .form__input::placeholder {
+    font-size: 14px;
+  }
+  
+  .form__btn {
+    right: 4px;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 33px;
+    height: 33px;
+    background-size: 15.35px 15.35px;
+  }
+}
+
