@@ -73,6 +73,15 @@
 
 .logo {
   height: 60px;
+  transition: all 0.3s;
+}
+
+.logo:hover {
+  opacity: 0.6;
+}
+
+.logo:active {
+  transform: scale(0.95);
 }
 
 .logo__svg {
@@ -191,6 +200,11 @@
   color: #ffffff;
   text-decoration: none;
   background-color: #1D4169;
+  transition: all 0.5s;
+}
+
+.event__link:hover {
+  background-color: #DF2224;
 }
 
 .event__link::after {
@@ -202,6 +216,22 @@
   width: 20px;
   height: 20px;
   background-image: url("../assets/svg/arrow-right.svg");
+}
+
+@keyframes arrow {
+  0% {
+      right: 20px;
+  }
+  50% {
+      right: 15px;
+  }
+  100% {
+      right: 20px;
+  }
+}
+
+.event__link:hover.event__link::after {
+  animation: arrow 1s linear infinite;
 }
 
 .footer {
@@ -253,6 +283,11 @@
   background-position: center;
   border: none;
   cursor: pointer;
+  transition: all 0.5s;
+}
+
+.form__btn:hover {
+  background-color: #1D4169;
 }
 
 
